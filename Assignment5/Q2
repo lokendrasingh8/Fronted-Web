@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Paris</title>
+
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            font-family: "Segoe UI", Tahoma, sans-serif;
+            color: #222;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: centeR;
+            padding: 1.5rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        
+        nav {
+            background-color: #34495e;
+            text-align: center;
+            padding: 0.8rem;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        
+        main section {
+            padding: 4rem 10%;
+            border-bottom: 3px solid #ccc;
+        }
+
+        /* 1️⃣ Introduction Section - Background Image */
+        #intro {
+            background: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: white;
+            text-shadow: 1px 1px 4px black;
+        }
+
+        #intro h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        #intro p {
+            font-size: 1.2rem;
+            max-width: 600px;
+        }
+
+        /* 2️⃣ History Section - Linear Gradient */
+        #history {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        }
+
+        #history h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        #history p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        
+        #attractions {
+            background: radial-gradient(circle, #a8edea, #fed6e3);
+        }
+
+        #attractions h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        #attractions ul {
+            list-style: square;
+            margin-left: 2rem;
+        }
+
+        #attractions li {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+
+        
+        #culture {
+            background-color: #ecf0f1;
+        }
+
+        #culture h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        #culture p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+
+        
+        @media (max-width: 768px) {
+            main section {
+                padding: 3rem 5%;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            nav a {
+                display: inline-block;
+                margin: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header>
+        <h1>Discover Paris</h1>
+    </header>
+
+    
+    <nav>
+        <a href="#intro">HOME</a>
+        <a href="#history">History</a>
+        <a href="#attractions">Attractions</a>
+        <a href="#culture">Culture</a>
+    </nav>
+
+    
+    <main>
+        <section id="intro">
+            <h2>Welcome to Paris</h2>
+            <p>
+                Paris, the capital city of France, is known as the "City of Light."
+                It’s famous for its iconic landmarks, world-class art, romantic streets, and rich history.
+            </p>
+        </section>
+
+        
+        <section id="history">
+            <h2>A Glimpse into History</h2>
+            <p>
+                Paris has a history that stretches back over 2,000 years.
+                From its beginnings as a Roman settlement to its role in the French Revolution,
+                Paris has always been at the center of European culture and politics.
+            </p>
+        </section>
+
+        
+        <section id="attractions">
+            <h2>Top Attractions</h2>
+            <ul>
+                <li>Eiffel Tower</li>
+                <li>Louvre Museum</li>
+                <li>Notre-Dame Cathedral</li>
+                <li>Seine River Cruise</li>
+                <li>Champs-Élysées</li>
+            </ul>
+        </section>
+
+        
+        <section id="culture">
+            <h2>Culture & Lifestyle</h2>
+            <p>
+                Paris is a hub for art, fashion, and cuisine. The city celebrates life through
+                its cafés, galleries, theaters, and annual festivals. It’s a place where tradition and modernity meet.
+            </p>
+        </section>
+    </main>
+
+   
+    <footer>
+        <p>&copy; 2025 Discover Paris | Designed by [LOKENDRA YADAV]</p>
+    </footer>
+
+</body>
+</html>
