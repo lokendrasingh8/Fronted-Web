@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced CSS Selectors Demonstration</title>
+  <style>
+    /* ================================
+       BASIC PAGE STYLING
+    ================================= */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      margin: 0;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #222;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+      margin-bottom: 40px;
+    }
+
+    /* ================================
+       ATTRIBUTE SELECTORS
+    ================================= */
+    /* Selects input with type="text" */
+    input[type="text"] {
+      padding: 10px;
+      border: 2px solid #007bff;
+      border-radius: 5px;
+      width: 200px;
+    }
+
+    /* Selects links that start with https */
+    a[href^="https"] {
+      color: #28a745;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Hover effect on https links */
+    a[href^="https"]:hover {
+      color: #155724;
+      text-decoration: underline;
+    }
+
+    /* ================================
+       PSEUDO-CLASSES
+    ================================= */
+    /* When input field is focused */
+    input:focus {
+      outline: none;
+      border-color: #ff5733;
+      background-color: #fff7f3;
+    }
+
+    /* Style every 2nd list item */
+    li:nth-child(2n) {
+      background-color: #e9ecef;
+    }
+
+    /* Change color of list item on hover */
+    li:hover {
+      background-color: #cce5ff;
+    }
+
+    /* ================================
+       PSEUDO-ELEMENTS
+    ================================= */
+    /* Add custom symbols before list items */
+    li::before {
+      content: "👉 ";
+      color: #007bff;
+    }
+
+    /* Add a decorative line after list */
+    ul::after {
+      content: "---- End of List ----";
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      color: #888;
+      font-style: italic;
+    }
+
+    /* ================================
+       COMBINATORS
+    ================================= */
+    /* Descendant selector - styles all p inside .content */
+    .content p {
+      color: #444;
+    }
+
+    /* Child selector - style only direct child h2 of .content */
+    .content > h2 {
+      color: #ff5733;
+    }
+
+    /* Adjacent sibling selector - styles first paragraph after h2 */
+    h2 + p {
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    /* General sibling selector - styles all paragraphs after h2 */
+    h2 ~ p {
+      margin-left: 20px;
+    }
+
+    /* ================================
+       LIST STYLING
+    ================================= */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      border: 2px solid #dee2e6;
+      border-radius: 10px;
+      max-width: 300px;
+    }
+
+    li {
+      padding: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    /* ================================
+       FORM AND LINKS SECTION
+    ================================= */
+    .form-section {
+      margin-top: 30px;
+    }
+
+    .form-section label {
+      font-weight: bold;
+    }
+
+    .link-section {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Advanced CSS Selectors Demonstration</h1>
+
+  <!-- Demonstrating Combinators -->
+  <div class="content">
+    <h2>Combinator Selectors</h2>
+    <p>This paragraph is an adjacent sibling of h2.</p>
+    <p>This one is a general sibling, also styled differently.</p>
+  </div>
+
+  <!-- Demonstrating List and Pseudo Selectors -->
+  <h2>List Example</h2>
+  <ul>
+    <li>HTML Basics</li>
+    <li>CSS Styling</li>
+    <li>JavaScript</li>
+    <li>React</li>
+    <li>Node.js</li>
+  </ul>
+
+  <!-- Demonstrating Attribute Selectors -->
+  <div class="form-section">
+    <label>Enter your name:</label>
+    <input type="text" placeholder="Focus to see effect">
+  </div>
+
+  <!-- Demonstrating [href^="https"] Attribute Selector -->
+  <div class="link-section">
+    <p>Visit the following links:</p>
+    <a href="https://www.google.com">Google (https link)</a><br>
+    <a href="http://example.com">Example (http link)</a>
+  </div>
+</body>
+</html>

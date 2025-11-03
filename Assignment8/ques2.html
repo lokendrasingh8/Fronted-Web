@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Height and Width Practice Layout</title>
+  <style>
+    /* Page Styling */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f4f6f8;
+      font-family: 'Poppins', sans-serif;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+      text-align: center;
+      padding: 10px;
+      overflow: hidden;
+    }
+
+    /* Box 1 - Fixed size with px */
+    .box1 {
+      background-color: #007bff;
+      width: 200px;
+      height: 150px;
+    }
+
+    /* Box 2 - Responsive with % and min/max constraints */
+    .box2 {
+      background-color: #28a745;
+      width: 40%;
+      min-height: 100px;
+      max-width: 400px;
+      overflow: auto;
+    }
+
+    /* Box 3 - Uses vh and em units */
+    .box3 {
+      background-color: #ff5733;
+      width: 20vw;
+      height: 15em;
+      overflow-y: scroll;
+    }
+
+    /* Scroll content demo */
+    .box3 p {
+      font-size: 1em;
+      line-height: 1.4em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Height and Width Practice Layout</h1>
+  <div class="container">
+    <div class="box box1">200px × 150px</div>
+    <div class="box box2">
+      40% Width<br>
+      min-height: 100px<br>
+      max-width: 400px
+    </div>
+    <div class="box box3">
+      <p>
+        This box uses <b>vw</b> and <b>em</b> units.<br><br>
+        The content scrolls if it overflows the height.
+        Add more text here to demonstrate scrolling behavior.<br><br>
+        Scroll down to see more content inside this box.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
