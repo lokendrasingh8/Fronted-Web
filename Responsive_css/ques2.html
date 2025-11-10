@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Web Design Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #0077b6;
+      color: white;
+      padding: 15px 30px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd60a;
+    }
+
+    /* ===== MAIN SECTION ===== */
+    main {
+      display: flex;
+      justify-content: space-around;
+      align-items: stretch;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+
+    .box {
+      background-color: white;
+      flex: 1 1 250px;
+      max-width: 350px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    .box h2 {
+      color: #0077b6;
+      margin-bottom: 10px;
+    }
+
+    .box p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      background-color: #0077b6;
+      color: white;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 750px) {
+      main {
+        flex-direction: column;
+        align-items: center;
+      }
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>MyWebsite</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <div class="box">
+      <h2>Feature 1</h2>
+      <p>Responsive design adapts smoothly to all devices for an amazing user experience.</p>
+    </div>
+
+    <div class="box">
+      <h2>Feature 2</h2>
+      <p>Flexbox makes layouts easy to manage with powerful alignment and spacing tools.</p>
+    </div>
+
+    <div class="box">
+      <h2>Feature 3</h2>
+      <p>Hover animations bring a modern and interactive touch to your website.</p>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2025 MyWebsite | All Rights Reserved
+  </footer>
+
+</body>
+</html>

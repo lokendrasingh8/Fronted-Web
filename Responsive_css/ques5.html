@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter Cards with Animation</title>
+  <style>
+    /* ===== Base Styling ===== */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+      color: #333;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #0077b6;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    /* ===== Container ===== */
+    .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+      gap: 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    /* ===== Card ===== */
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 280px;
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter 0.4s ease;
+    }
+
+    /* Remove filter and lift card on hover */
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+
+    .card:hover img {
+      filter: none;
+    }
+
+    .card h2 {
+      margin: 15px 0 5px;
+      color: #0077b6;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+      padding: 0 15px 20px;
+    }
+
+    /* ===== Fade-in Animation ===== */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== Responsive Design ===== */
+    @media (max-width: 800px) {
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Filter Cards with Animation</h1>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="https://picsum.photos/id/1005/400/300" alt="Profile 1">
+      <h2>Deepak Rawat</h2>
+      <p>Frontend Developer passionate about creating visually appealing and responsive designs.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/id/1011/400/300" alt="Profile 2">
+      <h2>Lokendra Yadav</h2>
+      <p>Backend Developer focusing on clean code, secure APIs, and efficient data handling.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/id/1024/400/300" alt="Profile 3">
+      <h2>Vaibhav Kaushik</h2>
+      <p>AI & ML enthusiast building intelligent systems with cutting-edge technologies.</p>
+    </div>
+  </div>
+
+</body>
+</html>

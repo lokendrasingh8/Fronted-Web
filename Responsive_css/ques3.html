@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Cards with Media Queries</title>
+  <style>
+    /* ===== Base Styling ===== */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    /* ===== Card Container ===== */
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    /* ===== Individual Card ===== */
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      flex: 1 1 calc(25% - 20px);
+      min-width: 250px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      text-align: center;
+    }
+
+    .card:hover {
+      background-color: #0077b6;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+      color: inherit;
+    }
+
+    .card p {
+      color: inherit;
+    }
+
+    /* ===== Tablet View (max-width: 900px) ===== */
+    @media (max-width: 900px) {
+      .card {
+        flex: 1 1 calc(50% - 20px);
+      }
+    }
+
+    /* ===== Mobile View (max-width: 600px) ===== */
+    @media (max-width: 600px) {
+      .card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Responsive Cards Layout</h1>
+
+  <div class="card-container">
+    <div class="card">
+      <h2>Card 1</h2>
+      <p>This is a responsive card layout using Flexbox and media queries.</p>
+    </div>
+    <div class="card">
+      <h2>Card 2</h2>
+      <p>Resize the window to see how the layout changes at different breakpoints.</p>
+    </div>
+    <div class="card">
+      <h2>Card 3</h2>
+      <p>On tablets, two cards per row; on mobiles, one card per row.</p>
+    </div>
+    <div class="card">
+      <h2>Card 4</h2>
+      <p>Each card also changes its background color when hovered.</p>
+    </div>
+  </div>
+
+</body>
+</html>
