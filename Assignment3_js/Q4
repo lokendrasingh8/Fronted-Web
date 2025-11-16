@@ -1,0 +1,12 @@
+console.log("\n================ Q4: Debugging Mystery ================\n");
+
+function showMessage() {
+
+    // debugger; // Add breakpoint here when debugging in VS Code
+    let greeting = "Welcome";   // Strict mode requires declaration
+    console.log(greeting);
+}
+
+showMessage();
+
+console.log("\n================ END OF FILE ================\n");
