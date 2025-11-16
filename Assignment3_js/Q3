@@ -1,0 +1,60 @@
+"use strict";
+
+const transactions = [
+    { id: 1, amount: 2000 },
+    { id: 2, amount: -500 },
+    { id: 3 },
+    null
+];
+
+let validTransactions = [];
+let invalidTransactions = [];
+
+console.log("=== TRANSACTION VALIDATION START ===\n");
+
+for (let tx of transactions) {
+
+    // Breakpoint (You can use debugger in browser/dev tools)
+    // debugger;
+
+    try {
+        // --- Null Check ---
+        if (tx === null) {
+            throw new Error("Null transaction object.");
+        }
+
+        // --- Missing Property Checks ---
+        if (!tx.id) {
+            throw new Error("Transaction ID missing.");
+        }
+
+        if (tx.amount === undefined) {
+            throw new Error(`Amount missing in transaction ID=${tx.id}`);
+        }
+
+        // --- Negative Amount Check ---
+        if (tx.amount < 0) {
+            throw new Error(`Negative amount in transaction ID=${tx.id}`);
+        }
+
+        // If all validations pass → Valid
+        validTransactions.push(tx);
+        console.log(` Valid Transaction → ID: ${tx.id}, Amount: ${tx.amount}`);
+
+    } catch (err) {
+        invalidTransactions.push({ transaction: tx, error: err.message });
+        console.log(` Invalid Transaction → ${err.message}`);
+    }
+
+    console.log("---------------------------");
+}
+
+console.log("\n FINAL TRANSACTION REPORT ");
+
+// Valid
+console.log(`\n Successful Transactions: ${validTransactions.length}`);
+console.log(validTransactions);
+
+// Invalid
+console.log(`\n Failed Transactions: ${invalidTransactions.length}`);
+console.log(invalidTransactions);
