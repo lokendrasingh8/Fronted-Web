@@ -1,0 +1,34 @@
+const apiData = ["25", "true", "false", "NaN", " ", "100px", "3.14", null, undefined];
+
+let validNumbers = [];
+let invalidNumbers = [];
+
+console.log("=== DATA PARSING REPORT ===\n");
+
+// Loop through each value
+for (let value of apiData) {
+
+    // Convert each type
+    let asNumber = Number(value);
+    let asBoolean = Boolean(value);
+    let asString = String(value);
+
+    console.log(`Original: ${value}`);
+    console.log(`→ Number: ${asNumber}`);
+    console.log(`→ Boolean: ${asBoolean}`);
+    console.log(`→ String: "${asString}"`);
+
+    // Check whether number is valid
+    if (!isNaN(asNumber) && value !== " " && value !== "100px" && value !== "NaN") {
+        validNumbers.push(asNumber);   // store valid numbers
+    } else {
+        invalidNumbers.push(value);    // store invalid numeric inputs
+    }
+
+    console.log("---------------------------");
+}
+
+// Final report
+console.log("\n=== FINAL SUMMARY ===");
+console.log("Valid Numeric Values:", validNumbers);
+console.log("Invalid Numeric Values:", invalidNumbers);
