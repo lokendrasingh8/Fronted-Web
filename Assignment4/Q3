@@ -1,0 +1,68 @@
+// Q3: Library Management System (Classes + Objects)
+
+class Book {
+    constructor(title, author, isbn, isIssued = false) {
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+        this.isIssued = isIssued;
+    }
+
+    issueBook() {
+        if (!this.isIssued) {
+            this.isIssued = true;
+            console.log(`Book "${this.title}" has been issued.`);
+        } else {
+            console.log(`Book "${this.title}" is already issued.`);
+        }
+    }
+
+    returnBook() {
+        if (this.isIssued) {
+            this.isIssued = false;
+            console.log(`Book "${this.title}" has been returned.`);
+        } else {
+            console.log(`Book "${this.title}" is not issued.`);
+        }
+    }
+
+    getDetails() {
+        return `${this.title} by ${this.author} (ISBN: ${this.isbn}) - ${this.isIssued ? "Issued" : "Available"}`;
+    }
+}
+
+const books = [
+    new Book("Atomic Habits", "James Clear", "1111"),
+    new Book("The Alchemist", "Paulo Coelho", "2222"),
+    new Book("Rich Dad Poor Dad", "Robert Kiyosaki", "3333"),
+    new Book("Clean Code", "Robert C. Martin", "4444"),
+];
+
+
+console.log("Available Books (Not Issued):");
+books
+    .filter(book => !book.isIssued)
+    .forEach(book => console.log(book.getDetails()));
+
+
+function issueBookByISBN(isbn) {
+    const book = books.find(b => b.isbn === isbn);
+
+    if (!book) {
+        console.log("Book not found!");
+        return;
+    }
+
+    // Issue the found book
+    book.issueBook();
+}
+
+
+console.log("\n--- Trying to Issue Book with ISBN 2222 ---");
+issueBookByISBN("2222");
+
+
+console.log("\nUpdated Available Books:");
+books
+    .filter(book => !book.isIssued)
+    .forEach(book => console.log(book.getDetails()));
