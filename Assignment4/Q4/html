@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Custom Form Builder</title>
+
+<style>
+    body { font-family: Arial; padding: 20px; }
+    .input-field { margin-bottom: 15px; }
+    label { font-weight: bold; display: block; margin-bottom: 5px; }
+    input, select { padding: 8px; width: 250px; }
+</style>
+</head>
+<body>
+
+<h2>Dynamic Form Builder</h2>
+
+<div id="formContainer"></div>
+
+<script src="q4.js"></script>
+</body>
+</html>
