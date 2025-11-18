@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Registration</title>
+
+<style>
+    body { font-family: Arial; margin: 40px; }
+
+    input {
+        display: block;
+        padding: 8px;
+        margin-bottom: 5px;
+        width: 250px;
+        border: 2px solid #aaa;
+        border-radius: 4px;
+    }
+
+    .error-msg {
+        color: red;
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .valid {
+        border-color: green;
+    }
+
+    .invalid {
+        border-color: red;
+    }
+</style>
+</head>
+<body>
+
+<h2>Student Registration Form</h2>
+
+<form id="studentForm">
+    <label>Name:</label>
+    <input type="text" id="name">
+    <div id="nameError" class="error-msg"></div>
+
+    <label>Email:</label>
+    <input type="text" id="email">
+    <div id="emailError" class="error-msg"></div>
+
+    <label>Phone:</label>
+    <input type="text" id="phone">
+    <div id="phoneError" class="error-msg"></div>
+
+    <label>Password:</label>
+    <input type="password" id="password">
+    <div id="passwordError" class="error-msg"></div>
+
+    <button type="submit">Register</button>
+</form>
+
+<script src="q2.js"></script>
+</body>
+</html>
